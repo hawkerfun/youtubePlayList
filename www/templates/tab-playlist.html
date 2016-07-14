@@ -1,0 +1,13 @@
+<ion-view view-title="Play List">
+  <ion-content class="padding">
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="music in playList" type="item-text-wrap">
+        <span>{{music.title.substr(0, 20)}}</span>
+        <button on-tap="playMusic()" class="button"><i class="ion-music-note"></i></button>
+        <ion-option-button class="button-assertive" ng-click="remove(music)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
